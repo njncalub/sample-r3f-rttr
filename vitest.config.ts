@@ -11,7 +11,10 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
-    setupFiles: "./vitest.setup.ts",
+    setupFiles: [
+      "./src/test/setupFiles/setupGlobalAct.ts",
+      "./src/test/setupFiles/setupDreiMocks.ts",
+    ],
     exclude: [...configDefaults.exclude, "**/e2e/**"],
     coverage: {
       all: true,

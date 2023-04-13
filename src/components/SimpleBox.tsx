@@ -27,14 +27,14 @@ const SimpleBox: FC<SimpleBoxProps> = ({
     setHovered(false);
   };
 
-  // TODO: If we show the text, the test fails.
+  // If we do not mock the `Text` component, it will return an error.
   //
   // It will return:
   // Error: Not implemented: HTMLCanvasElement.prototype.getContext (without installing the canvas npm package)
   //
   // If you do install the `canvas` package, this will be the error:
   // WebGL SDF generation not supported: Cannot read properties of null (reading 'canvas')
-  const SHOW_TEXT = false;
+  const SHOW_TEXT = true;
 
   return (
     <group>
